@@ -13,7 +13,7 @@ FILE STRUCTURE
 ------------------------------------------------------------
 /project-folder
 │
-├── page1.html      (Home page)
+├── index.html      (Home page)
 ├── page2.html      (Carpathia / Titanic information + quiz + table)
 ├── page3.html      (Media page)
 ├── main.js         (JavaScript functionality)
@@ -28,7 +28,7 @@ FILE STRUCTURE
 RELATIVE PATHS USED
 ------------------------------------------------------------
 - Navigation between pages:
-  page1.html → page2.html → page3.html
+  index.html → page2.html → page3.html
 
 - Script file:
   <script src="main.js" defer></script>
