@@ -1,6 +1,6 @@
 const currentPage = window.location.pathname;
 
-if (currentPage.includes("page1.html")) {
+if (currentPage.includes("index.html")) {
     document.getElementById("homeLink").style.fontWeight = "bold";
     document.getElementById("homeLink").style.color = "#FF69B4"
 } else {
