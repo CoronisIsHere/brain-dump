@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Info Dump — Media</title>
+        <link rel="icon" type="image/png" href="images/Caterpillar.png">
+        <link rel="stylesheet" href="style.css">
+        <script src="main.js" defer></script>
+    </head>
+    <body>
+        <div class="page-wrapper">
+
+            <!-- Hero / Splash Section -->
+            <header class="hero" role="banner">
+                <h1>Media</h1>
+                <p class="subtitle">Songs and videos that sum me up as a person.</p>
+            </header>
+
+            <div class="main-layout">
+
+                <!-- Sidebar Navigation -->
+                <nav class="sidebar" aria-label="Main navigation">
+                    <ul>
+                        <li><a id="homeLink" href="index.html">Home</a></li>
+                        <li><a id="carpathiaLink" href="page2.html">Carpathia</a></li>
+                        <li><a id="mediaLink" href="page3.html" aria-current="page">Media</a></li>
+                        <li class="theme-label" aria-hidden="true">Theme</li>
+                        <li><button onclick="setTheme('light')" aria-label="Switch to light mode">☀ Light</button></li>
+                        <li><button onclick="setTheme('dark')" aria-label="Switch to dark mode">🌙 Dark</button></li>
+                        <li><button onclick="setTheme('ocean')" aria-label="Switch to ocean mode">🌊 Ocean</button></li>
+                    </ul>
+                </nav>
+
+                <!-- Main Content -->
+                <main class="content-area" id="main-content">
+
+                    <!-- Audio -->
+                    <section>
+                        <h2>A Song That Hits Different</h2>
+                        <p>This is one of my absolute favourite songs that I almost always cry to because of that pufferfish edit. This is the original version of <strong>Drag Path</strong> by Twenty One Pilots.</p>
+                        <audio controls aria-label="Audio player: Drag Path by Twenty One Pilots">
+                            <source src="audio/Drag Path - TOP.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </section>
+
+                    <!-- Video -->
+                    <section>
+                        <h2>A Video That Captures It</h2>
+                        <p>This is a video of a bunch of student council members from the high schools across HRM at Mascot Showdown — just having a great time and enjoying ourselves.</p>
+                        <video width="600" controls aria-label="Video: HRM Mascot Showdown student council fun">
+                            <source src="videos/Devils-Day.mp4" type="video/mp4">
+                            Your browser does not support the video element.
+                        </video>
+                    </section>
+
+                    <!-- Embedded YouTube -->
+                    <section>
+                        <h2>A YouTube Favourite</h2>
+                        <p>A video of some of my favourite content creators that never fails to make me cackle and die of laughter.</p>
+                        <p><em>Note: Launch with a Live Server if the YouTube embed doesn't load.</em></p>
+                        <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/qLTUxq1lHp4?si=9AOaT0OPetMJGs8-"
+                            title="YouTube video: favourite content creators compilation"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+                    </section>
+
+                    <!-- Media Feedback Form -->
+                    <section>
+                        <h2>What Did You Think?</h2>
+                        <div class="form-container">
+                            <h3>Media Feedback</h3>
+                            <div class="form-group">
+                                <label for="mediaName">Your Name</label>
+                                <input type="text" id="mediaName" name="mediaName" placeholder="e.g. Alex" autocomplete="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="favMedia">Which media did you enjoy most?</label>
+                                <select id="favMedia" name="favMedia" aria-label="Select favourite media">
+                                    <option value="">— Choose one —</option>
+                                    <option value="audio">Drag Path (Audio)</option>
+                                    <option value="video">Mascot Showdown (Video)</option>
+                                    <option value="youtube">YouTube Compilation</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="mediaComment">Your thoughts</label>
+                                <textarea id="mediaComment" name="mediaComment" rows="3" placeholder="What did you think?"></textarea>
+                            </div>
+                            <button type="button" onclick="submitMediaForm()" aria-label="Submit media feedback">Submit Feedback</button>
+                            <p id="mediaResult" role="alert" aria-live="polite" style="margin-top:0.75rem; color: var(--accent); display:none;"></p>
+                        </div>
+                    </section>
+
+                </main>
+            </div>
+
+            <footer>
+                <p>Info Dump &copy; 2026 &mdash; Made with HTML, CSS &amp; JS | CSCI1170</p>
+            </footer>
+        </div>
+
+        <script>
+            function submitMediaForm() {
+                const name = document.getElementById('mediaName').value.trim();
+                const result = document.getElementById('mediaResult');
+
+                if (!name) {
+                    result.style.display = 'block';
+                    result.style.color = 'var(--accent-pink)';
+                    result.textContent = 'Please enter your name!';
+                    return;
+                }
+                result.style.display = 'block';
+                result.style.color = 'var(--accent)';
+                result.textContent = `Thanks for the feedback, ${name}! 🎵`;
+                document.getElementById('mediaName').value = '';
+                document.getElementById('mediaComment').value = '';
+                document.getElementById('favMedia').value = '';
+            }
+        </script>
+    </body>
+</html>

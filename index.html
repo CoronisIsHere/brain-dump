@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Info Dump — Home</title>
+        <link rel="icon" type="image/png" href="images/Caterpillar.png">
+        <link rel="stylesheet" href="style.css">
+        <script src="main.js" defer></script>
+    </head>
+    <body>
+        <div class="page-wrapper">
+
+            <!-- Hero / Splash Section -->
+            <header class="hero" role="banner">
+                <h1>Welcome to My Info Dump</h1>
+                <p class="subtitle">A personal corner of the internet — interests, passions, and everything in between.</p>
+            </header>
+
+            <div class="main-layout">
+
+                <!-- Sidebar Navigation -->
+                <nav class="sidebar" aria-label="Main navigation">
+                    <ul>
+                        <li><a id="homeLink" href="index.html" aria-current="page">Home</a></li>
+                        <li><a id="carpathiaLink" href="page2.html">Carpathia</a></li>
+                        <li><a id="mediaLink" href="page3.html">Media</a></li>
+                        <li class="theme-label" aria-hidden="true">Theme</li>
+                        <li><button onclick="setTheme('light')" aria-label="Switch to light mode">☀ Light</button></li>
+                        <li><button onclick="setTheme('dark')" aria-label="Switch to dark mode">🌙 Dark</button></li>
+                        <li><button onclick="setTheme('ocean')" aria-label="Switch to ocean mode">🌊 Ocean</button></li>
+                    </ul>
+                </nav>
+
+                <!-- Main Content -->
+                <main class="content-area" id="main-content">
+
+                    <section>
+                        <p>I know we were supposed to make a personal professional website for the future, but I don't currently know what I want to do, so hopefully just sharing some of the things that I'm interested in is enough.</p>
+
+                        <h2>Some of my interests</h2>
+                        <ul>
+                            <li>Bugs</li>
+                            <li>Music
+                                <ul>
+                                    <li>Bad Bunny</li>
+                                    <li>Kate Bush</li>
+                                    <li>Mazzy Star</li>
+                                    <li>Twenty One Pilots</li>
+                                    <li>Gigi Perez</li>
+                                    <li>Hozier</li>
+                                    <li>GIMS</li>
+                                    <li>The Weeknd</li>
+                                    <li>Tyler, The Creator</li>
+                                </ul>
+                            </li>
+                            <li>The Sinking of the Titanic and who came to save her</li>
+                            <li>Shows</li>
+                            <li>Reading</li>
+                            <li>Coding</li>
+                        </ul>
+
+                        <h3>Top Artists Right Now</h3>
+                        <ol>
+                            <li>Bad Bunny</li>
+                            <li>Sublime</li>
+                            <li>Twenty One Pilots</li>
+                        </ol>
+                    </section>
+
+                    <!-- Photo Gallery (Grid) -->
+                    <section>
+                        <h2>Photo Gallery</h2>
+                        <div class="photo-gallery" role="list" aria-label="Photo gallery">
+                            <figure role="listitem">
+                                <img src="images/Caterpillar.png" alt="A caterpillar, the site's favicon and mascot">
+                                <figcaption>My site mascot — a caterpillar!</figcaption>
+                            </figure>
+                            <figure role="listitem">
+                                <img src="images/carpathia1.jpg" alt="Painting of the RMS Carpathia at sea">
+                                <figcaption>RMS Carpathia — painting</figcaption>
+                            </figure>
+                            <figure role="listitem">
+                                <img src="images/carpathia2.jpg" alt="Large art piece depicting the Carpathia and its crew">
+                                <figcaption>Carpathia crew art piece</figcaption>
+                            </figure>
+                        </div>
+                    </section>
+
+                    <!-- Contact Form -->
+                    <section>
+                        <h2>Leave a Message</h2>
+                        <div class="form-container">
+                            <h3>Guest Book</h3>
+                            <p>Have a thought? Leave a note below!</p>
+                            <div class="form-group">
+                                <label for="guestName">Your Name</label>
+                                <input type="text" id="guestName" name="guestName" placeholder="e.g. Jane Doe" autocomplete="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="guestEmail">Email (optional)</label>
+                                <input type="email" id="guestEmail" name="guestEmail" placeholder="you@example.com" autocomplete="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="favTopic">Favourite topic on this site?</label>
+                                <select id="favTopic" name="favTopic" aria-label="Select favourite topic">
+                                    <option value="">— Pick one —</option>
+                                    <option value="carpathia">The Carpathia</option>
+                                    <option value="music">Music</option>
+                                    <option value="bugs">Bugs</option>
+                                    <option value="media">Media</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="guestMessage">Your Message</label>
+                                <textarea id="guestMessage" name="guestMessage" rows="4" placeholder="Say something nice..."></textarea>
+                            </div>
+                            <button type="button" onclick="submitGuestBook()" aria-label="Submit guest book entry">Submit</button>
+                            <p id="formResult" role="alert" aria-live="polite" style="margin-top:0.75rem; color: var(--accent); display:none;"></p>
+                        </div>
+                    </section>
+
+                </main>
+            </div>
+
+            <footer>
+                <p>Info Dump &copy; 2026 &mdash; Made with HTML, CSS &amp; JS | CSCI1170</p>
+            </footer>
+        </div>
+
+        <script>
+            function submitGuestBook() {
+                const name = document.getElementById('guestName').value.trim();
+                const msg = document.getElementById('guestMessage').value.trim();
+                const result = document.getElementById('formResult');
+
+                if (!name) {
+                    result.style.display = 'block';
+                    result.style.color = 'var(--accent-pink)';
+                    result.textContent = 'Please enter your name!';
+                    return;
+                }
+                if (!msg) {
+                    result.style.display = 'block';
+                    result.style.color = 'var(--accent-pink)';
+                    result.textContent = 'Please write a message!';
+                    return;
+                }
+                result.style.display = 'block';
+                result.style.color = 'var(--accent)';
+                result.textContent = `Thanks, ${name}! Your message has been received 🎉`;
+                document.getElementById('guestName').value = '';
+                document.getElementById('guestEmail').value = '';
+                document.getElementById('guestMessage').value = '';
+                document.getElementById('favTopic').value = '';
+            }
+        </script>
+    </body>
+</html>

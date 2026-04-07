@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Info Dump — The Carpathia</title>
+        <link rel="icon" type="image/png" href="images/Caterpillar.png">
+        <link rel="stylesheet" href="style.css">
+        <script src="main.js" defer></script>
+    </head>
+    <body>
+        <div class="page-wrapper">
+
+            <!-- Hero / Splash Section -->
+            <header class="hero" role="banner">
+                <h1>The Carpathia &amp; Its History</h1>
+                <p class="subtitle">The ship that answered the call — and saved 705 lives.</p>
+            </header>
+
+            <div class="main-layout">
+
+                <!-- Sidebar Navigation -->
+                <nav class="sidebar" aria-label="Main navigation">
+                    <ul>
+                        <li><a id="homeLink" href="index.html">Home</a></li>
+                        <li><a id="carpathiaLink" href="page2.html" aria-current="page">Carpathia</a></li>
+                        <li><a id="mediaLink" href="page3.html">Media</a></li>
+                        <li class="theme-label" aria-hidden="true">Theme</li>
+                        <li><button onclick="setTheme('light')" aria-label="Switch to light mode">☀ Light</button></li>
+                        <li><button onclick="setTheme('dark')" aria-label="Switch to dark mode">🌙 Dark</button></li>
+                        <li><button onclick="setTheme('ocean')" aria-label="Switch to ocean mode">🌊 Ocean</button></li>
+                    </ul>
+                </nav>
+
+                <!-- Main Content -->
+                <main class="content-area" id="main-content">
+
+                    <!-- Construction section -->
+                    <section>
+                        <p>The RMS Carpathia was a British passenger steamship built in 1902-1903 for the <a href="https://www.cunard.com/en-us/cunard-stories/180-years-of-cunard">Cunard Line</a>. She was constructed by Swan Hunter at their yard in Wallsend, England.</p>
+
+                        <h2>Construction &amp; Launch</h2>
+                        <ul>
+                            <li>Launched: August 6, 1902</li>
+                            <li>Completed: April 1903</li>
+                            <li>Built at: Wallsend, near Newcastle upon Tyne</li>
+                            <li>Purpose: Transatlantic passenger and immigrant service</li>
+                        </ul>
+
+                        <p>When first built, Carpathia was not considered a luxury liner. She was designed to carry:</p>
+                        <ul>
+                            <li>About 1,700 passengers
+                                <ul>
+                                    <li>First Class</li>
+                                    <li>Second Class</li>
+                                    <li>Steerage (Third Class), mainly immigrants traveling to North America</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <h2>Size &amp; Technical Details</h2>
+                        <ul>
+                            <li>Length: About 558 feet (170 m)</li>
+                            <li>Tonnage: Around 13,500 gross tons</li>
+                            <li>Speed: Approximately 14 knots</li>
+                            <li>Engines: Twin-screw steam engines powered by coal-fired boilers</li>
+                        </ul>
+
+                        <h2>Passenger Accommodations</h2>
+                        <p>When new, Carpathia was considered comfortable:</p>
+                        <ul>
+                            <li>Spacious dining rooms</li>
+                            <li>Electric lighting (modern at the time)</li>
+                            <li>Heated Cabins</li>
+                            <li>Library and smoking rooms for first-class passengers</li>
+                        </ul>
+                        <p>She mainly sailed between Liverpool, New York City, and Mediterranean ports like Trieste.</p>
+                    </section>
+
+                    <!-- Photo Gallery -->
+                    <section>
+                        <h2>Carpathia in Images</h2>
+                        <div class="photo-gallery" role="list" aria-label="Carpathia photo gallery">
+                            <figure role="listitem">
+                                <img src="images/carpathia2.jpg" alt="Large art piece of the Carpathia and crew">
+                                <figcaption>The Carpathia and her crew — a large art piece</figcaption>
+                            </figure>
+                            <figure role="listitem">
+                                <img src="images/carpathia1.jpg" alt="Painting of the RMS Carpathia on a small canvas">
+                                <figcaption>RMS Carpathia — smaller canvas painting</figcaption>
+                            </figure>
+                            <figure role="listitem">
+                                <a href="https://www.britannica.com/topic/Carpathia" aria-label="View Britannica article on Carpathia (opens in new tab)" target="_blank" rel="noopener">
+                                    <img src="images/carpathia3.jpg" alt="Photo of the sunken Carpathia wreck on the ocean floor — click to visit Britannica">
+                                </a>
+                                <figcaption>The wreck today — click to visit Britannica</figcaption>
+                            </figure>
+                        </div>
+                    </section>
+
+                    <!-- Before Titanic -->
+                    <section>
+                        <h2>Before the Titanic</h2>
+                        <p>When first built, Carpathia was simply a dependable immigrant liner — not famous yet. That changed in 1912, when she famously rescued survivors from the RMS Titanic after it sank. But at the time of her launch in 1903, she was just one of Cunard's solid, hardworking ships built for steady service across the Atlantic.</p>
+                    </section>
+
+                    <!-- During the sinking -->
+                    <section>
+                        <h2>During the Sinking of the Titanic</h2>
+                        <p>When the RMS Titanic struck an iceberg late on April 14, 1912, the RMS Carpathia was about 58 nautical miles (107 km) away in the North Atlantic. She would become the ship that rescued the survivors.</p>
+
+                        <h3>The Distress Call</h3>
+                        <p>At 12:25 a.m., Carpathia's wireless operator, Harold Cottam, received Titanic's CQD/SOS distress signal. Captain Arthur Rostron immediately:</p>
+                        <ul>
+                            <li>Turned the ship toward Titanic's position</li>
+                            <li>Ordered full speed ahead</li>
+                            <li>Shut off heating and hot water to send more steam to the engines</li>
+                            <li>Prepared blankets, food, coffee, and medical aid</li>
+                            <li>Readied lifeboat stations in case more rescues were needed</li>
+                        </ul>
+
+                        <h3>Racing Through Ice</h3>
+                        <p>Carpathia's top speed was about 14 knots, but Captain Rostron pushed her to nearly 17 knots — an extremely risky move in an ice field at night. She dodged floating ice and small icebergs at full speed, arriving around 4:00 a.m. Titanic had already sunk at approximately 2:20 a.m.</p>
+
+                        <h3>The Rescue</h3>
+                        <p>Carpathia began picking up survivors from lifeboats scattered across the freezing ocean.</p>
+                        <ul>
+                            <li>Total Rescued: <strong>705 people</strong></li>
+                            <li>Many were suffering from hypothermia</li>
+                            <li>Some lifeboats had been drifting for hours</li>
+                        </ul>
+                        <p>Crew members helped survivors climb aboard using rope ladders and cargo nets. Women and children were lifted first. Doctors treated the injured. Passengers gave up cabins and clothing. Hot drinks and soup were served. The last lifeboat was brought aboard around 8:30 a.m.</p>
+
+                        <h3>After the Rescue</h3>
+                        <p>Carpathia searched the area briefly for more survivors, but found none alive. She then turned toward New York City, arriving on April 18, 1912, greeted by thousands as a hero ship. Captain Rostron later received honours from the U.S. Congress and the British government.</p>
+
+                        <h3>Why Carpathia's Role Was So Important</h3>
+                        <ul>
+                            <li>She responded immediately</li>
+                            <li>She risked sailing at dangerous speed through ice</li>
+                            <li>She saved every life that was still alive when she arrived</li>
+                        </ul>
+                        <p><em>Without Carpathia, there would have been no survivors from Titanic.</em></p>
+                    </section>
+
+                    <!-- After rescue -->
+                    <section>
+                        <h2>After the Titanic Rescue</h2>
+
+                        <h3>1912-1914: Back to Passenger Service</h3>
+                        <p>Following the rescue, Carpathia underwent inspections and minor refits, then continued transatlantic routes between Liverpool, New York City, and Mediterranean ports. Passengers often chose her because of her heroic reputation.</p>
+
+                        <h3>World War I Service (1914-1918)</h3>
+                        <p>When World War I began in 1914, Carpathia was converted into a troop transport ship, carrying Canadian and American soldiers and supplies across the Atlantic through dangerous waters filled with German submarines. She was painted in wartime gray and sometimes sailed in convoy for protection.</p>
+
+                        <h3>Her Final Voyage (1918)</h3>
+                        <p>On July 17, 1918, while sailing from Liverpool toward the United States, Carpathia was attacked by the German submarine SM U-55. Two of three torpedoes hit the ship. Five crew members were killed; the remaining crew abandoned ship safely. After several hours, she sank into the Atlantic Ocean.</p>
+
+                        <h3>Where She Lies Today</h3>
+                        <p>The wreck of Carpathia was discovered in 1999, lying about 500 feet (150 m) below the surface, southwest of Ireland. Though remembered for rescuing Titanic's survivors, she ultimately became a casualty of war.</p>
+
+                        <h3>Legacy</h3>
+                        <ul>
+                            <li>The ship that answered Titanic's distress call</li>
+                            <li>A symbol of courage and duty at sea</li>
+                            <li>A heroic vessel that served both civilians and soldiers</li>
+                        </ul>
+                        <p>Her story is often told alongside Titanic's — but she had a long and honourable life of her own before and after that famous night.</p>
+
+                        <p>To learn more: <a href="https://en.wikipedia.org/wiki/RMS_Carpathia">RMS Carpathia on Wikipedia</a></p>
+                    </section>
+
+                    <!-- Distance Table -->
+                    <section>
+                        <h2>Ships Near the Titanic While It Was Sinking</h2>
+                        <div class="table-wrapper">
+                        <table id="distanceTable" aria-label="Ships near the Titanic and their distances">
+                                <caption>Nearby Ships on the Night of April 14-15, 1912</caption>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Ship</th>
+                                        <th scope="col">Distance from Titanic<th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>RMS Carpathia</td>
+                                    <td>58 miles (~93 km)</td>
+                                </tr>
+                                <tr>
+                                    <td>Schooner Sampson</td>
+                                    <td>7 miles (~11 km)</td>
+                                </tr>
+                                <tr>
+                                    <td>SS Californian</td>
+                                    <td>5-19 miles (~8-30 km)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                        <button type="button" onclick="sortTable()" aria-label="Sort table by distance from closest to farthest">Sort by Distance</button>
+                    </section>
+
+                    <!-- Quiz -->
+                    <section>
+                        <h2>Titanic &amp; Carpathia Quiz</h2>
+                        <p>Test your knowledge! Choose your answers and submit below.</p>
+                        <div id="quiz" aria-label="Titanic and Carpathia quiz questions"></div>
+                        <p id="result" role="alert" aria-live="polite">Good Luck! Score will show here.</p>
+                        <button type="button" onclick="submitQuiz()" aria-label="Submit quiz answers">Submit Quiz</button>
+                    </section>
+
+                </main>
+            </div>
+
+            <footer>
+                <p>Info Dump &copy; 2026 &mdash; Made with HTML, CSS &amp; JS | CSCI1170</p>
+            </footer>
+        </div>
+
+        <script>
+            function sortTable() {
+                const table = document.getElementById("distanceTable");
+                let rows = Array.from(table.tBodies[0].rows).filter(row => row.cells.length > 1);
+
+                rows.sort((a, b) => {
+                    let aVal = parseInt(a.cells[1].innerText.match(/\d+/)[0]);
+                    let bVal = parseInt(b.cells[1].innerText.match(/\d+/)[0]);
+                    return aVal - bVal;
+                });
+
+                rows.forEach(row => table.tBodies[0].appendChild(row));
+                alert("Table sorted from closest to farthest!");
+            }
+        </script>
+    </body>
+</html>
